@@ -28,7 +28,7 @@ pipeline {
           docker run --rm --network=host \
             -v "$WORKSPACE":/workspace -w /workspace \
             mcr.microsoft.com/playwright/python:v1.54.0-noble \
-            bash -lc "python3 -m pip install -r requirements.txt && playwright install --with-deps && pytest -q"
+            bash -lc "python3 -m pip install -r requirements.txt && playwright install chromium --with-deps && pytest -q"
         '''
       }
     }
