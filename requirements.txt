@@ -1,2 +1,5 @@
+sentence-transformers==2.2.2
+pandas
+openpyxl
 playwright
-pytest
+boto3
