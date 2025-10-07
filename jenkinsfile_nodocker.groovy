@@ -9,7 +9,7 @@ pipeline {
 
     stage('Start demo app') {
       steps {
-        // start a simple static server in background and record pid
+    
         sh '''
           nohup python3 -m http.server 5000 --directory site --bind 0.0.0.0 > app.log 2>&1 &
           echo $! > app.pid
@@ -39,7 +39,7 @@ pipeline {
 	
     stage('Run Playwright tests) {
       steps {
-        // Use a Playwright python image to run tests. Replace version if needed.
+       
          sh '''
             #source venv/bin/activate
             test_playwright.py
