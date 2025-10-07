@@ -1,4 +1,9 @@
 from playwright.sync_api import sync_playwright
+from sentence_transformers import SentenceTransformer, util
+import os
+import re
+import pandas as pd
+import configparser
 
 def test_index_shows_text():
     with sync_playwright() as p:
