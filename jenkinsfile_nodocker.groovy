@@ -38,7 +38,7 @@ pipeline {
 		
 		
 	
-    stage('Run Playwright tests) {
+    stage('Run Playwright tests') {
       steps {
        
          sh '''
