@@ -21,9 +21,9 @@ pipeline {
       }
     }
 	
-	stages {
-        stage('Setup Python') {
-            steps {
+	
+    stage('Setup Python') {
+        steps {
                 sh '''
                   python3 -m venv venv
                   source venv/bin/activate
@@ -33,7 +33,8 @@ pipeline {
                   playwright install chromium --with-deps
                 '''
             }
-        }
+	}
+        
 		
 		
 	
