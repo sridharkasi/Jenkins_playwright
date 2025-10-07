@@ -41,9 +41,8 @@ pipeline {
       steps {
        
          sh '''
-            #source venv/bin/activate
-            test_playwright.py
-                '''
+         	test_playwright.py
+            '''
       }
     }
 
